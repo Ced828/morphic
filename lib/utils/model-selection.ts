@@ -7,17 +7,14 @@ import { SearchMode } from '@/lib/types/search'
 import { isProviderEnabled } from '@/lib/utils/registry'
 
 const DEFAULT_MODEL: Model = {
-  id: 'gpt-5-mini',
-  name: 'GPT-5 mini',
-  provider: 'OpenAI',
-  providerId: 'openai',
-  providerOptions: {
-    openai: {
-      reasoningEffort: 'low',
-      reasoningSummary: 'auto'
-    }
-  }
+  id: 'gemini-3.1-flash-lite-preview',
+  name: 'Gemini 3.1 Flash Lite',
+  provider: 'google',
+  providerId: 'google',
+  providerOptions: {}
 }
+  
+
 
 const VALID_MODEL_TYPES: ModelType[] = ['speed', 'quality']
 const MODE_FALLBACK_ORDER: SearchMode[] = ['quick', 'adaptive']
