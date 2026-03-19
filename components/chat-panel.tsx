@@ -228,6 +228,7 @@ export function ChatPanel({
               handleInputChange({ target: { value: message } } as any)
               setTimeout(() => inputRef.current?.form?.requestSubmit(), 10)
             }}
+            onCategoryClick={() => {}}
             inputRef={inputRef}
             className="mt-2"
           />
