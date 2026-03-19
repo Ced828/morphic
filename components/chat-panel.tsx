@@ -125,7 +125,9 @@ export function ChatPanel({
       {messages.length === 0 && (
         <div className="mb-10 flex flex-col items-center gap-4">
           <IconBlinkingLogo className="size-12" />
-          <h1 className="text-2xl font-medium text-foreground">What would you like to know?</h1>
+          <h1 className="text-2xl font-medium text-foreground text-center">
+            What would you like to know?
+          </h1>
         </div>
       )}
       
