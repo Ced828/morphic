@@ -208,7 +208,7 @@ export function ChatPanel({
             </div>
             <div className="flex items-center gap-2">
               {messages.length > 0 && (
-                <Button variant="outline" size="icon" onClick={handleNewChat} className="rounded-full">
+                <Button variant="outline" size="icon" onClick={handleNewChat} className="rounded-full" type="button">
                   <MessageCirclePlus className="size-4" />
                 </Button>
               )}
@@ -234,6 +234,3 @@ export function ChatPanel({
     </div>
   )
 }
-
-
-Testez : L'icône trombone doit être là. Envoyez votre fichier .ipynb et demandez à Gemini : "Explique-moi le contenu de ce notebook".
