@@ -1,23 +1,27 @@
 'use client'
 
 import { useRef, useState } from 'react'
-
 import { Paperclip } from 'lucide-react'
 import { toast } from 'sonner'
-
 import { cn } from '@/lib/utils'
-
 import { Button } from './ui/button'
 
 const allowedImageTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/webp']
 const allowedOtherTypes = [
   'application/pdf',
+  'application/epub+zip', // Ajout du support EPUB
   'application/msword',
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 ]
 
-const isAllowedFileType = (file: File) =>
-  allowedImageTypes.includes(file.type) || allowedOtherTypes.includes(file.type)
+const isAllowedFileType = (file: File) => {
+  // Vérifie par type MIME ou par extension pour l'EPUB
+  return (
+    allowedImageTypes.includes(file.type) || 
+    allowedOtherTypes.includes(file.type) || 
+    file.name.endsWith('.epub')
+  )
+}
 
 export function FileUploadButton({
   onFileSelect
@@ -31,13 +35,12 @@ export function FileUploadButton({
     if (!files) return
 
     const fileArray = Array.from(files).slice(0, 3)
-
     const validFiles = fileArray.filter(isAllowedFileType)
     const rejected = fileArray.filter(f => !isAllowedFileType(f))
 
     if (rejected.length > 0) {
       toast.error(
-        'Some files were not accepted: ' + rejected.map(f => f.name).join(', ')
+        'Fichiers non acceptés : ' + rejected.map(f => f.name).join(', ')
       )
     }
 
@@ -65,13 +68,14 @@ export function FileUploadButton({
         'relative rounded-full',
         isDragging && 'ring-2 ring-blue-500 ring-offset-2'
       )}
-      title="Drag and drop or click to upload"
+      title="Glissez-déposez ou cliquez pour uploader"
     >
       <input
         ref={inputRef}
         type="file"
-        accept="image/*,.pdf,.doc,.docx"
-        hidden
+        // Ajout de .epub dans le sélecteur de fichiers
+        accept="image/*,.pdf,.doc,.docx,.epub,application/epub+zip"
+        className="hidden"
         multiple
         onChange={e => {
           handleFiles(e.target.files)
