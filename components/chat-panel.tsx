@@ -230,7 +230,7 @@ export function ChatPanel({
           {/* Bottom menu area */}
           <div className="flex items-center justify-between p-3">
             <div className="flex items-center gap-2">
-              {!isGuest && (
+            
                 <FileUploadButton
                   onFileSelect={async files => {
                     const newFiles: UploadedFile[] = files.map(file => ({
