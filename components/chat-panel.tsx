@@ -234,3 +234,6 @@ export function ChatPanel({
     </div>
   )
 }
+
+
+Testez : L'icône trombone doit être là. Envoyez votre fichier .ipynb et demandez à Gemini : "Explique-moi le contenu de ce notebook".
