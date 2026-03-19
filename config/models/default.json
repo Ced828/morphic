@@ -4,62 +4,53 @@
     "byMode": {
       "quick": {
         "speed": {
-          "id": "gpt-5-mini",
-          "name": "GPT-5 mini",
-          "provider": "OpenAI",
-          "providerId": "openai",
-          "providerOptions": {
-            "openai": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto"
-            }
+          "id": "gemini-1.5-flash-latest",
+          "name": "Gemini Flash 1.5",
+          "provider": "google",
+          "capabilities": {
+            "vision": true,
+            "tool_use": true,
+            "file_upload": true
           }
         },
         "quality": {
-          "id": "gpt-5.2",
-          "name": "GPT-5.2",
-          "provider": "OpenAI",
-          "providerId": "openai",
-          "providerOptions": {
-            "openai": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto"
-            }
+          "id": "gemini-1.5-pro-latest",
+          "name": "Gemini Pro 1.5",
+          "provider": "google",
+          "capabilities": {
+            "vision": true,
+            "tool_use": true,
+            "file_upload": true
           }
         }
       },
       "adaptive": {
         "speed": {
-          "id": "gpt-5-mini",
-          "name": "GPT-5 mini",
-          "provider": "OpenAI",
-          "providerId": "openai",
-          "providerOptions": {
-            "openai": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto"
-            }
+          "id": "gemini-1.5-flash-latest",
+          "name": "Gemini Flash 1.5",
+          "provider": "google",
+          "capabilities": {
+            "vision": true,
+            "tool_use": true,
+            "file_upload": true
           }
         },
         "quality": {
-          "id": "gpt-5.2",
-          "name": "GPT-5.2",
-          "provider": "OpenAI",
-          "providerId": "openai",
-          "providerOptions": {
-            "openai": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto"
-            }
+          "id": "gemini-1.5-pro-latest",
+          "name": "Gemini Pro 1.5",
+          "provider": "google",
+          "capabilities": {
+            "vision": true,
+            "tool_use": true,
+            "file_upload": true
           }
         }
       }
     },
     "relatedQuestions": {
-      "id": "gpt-4.1",
-      "name": "GPT-4.1",
-      "provider": "OpenAI",
-      "providerId": "openai"
+      "id": "gemini-1.5-flash-latest",
+      "name": "Gemini Flash 1.5",
+      "provider": "google"
     }
   }
 }
