@@ -5,7 +5,7 @@
       "quick": {
         "speed": {
           "id": "gemini-3.1-flash-lite-preview",
-          "name": "Gemini 3.1 Flash Lite (Speed)",
+          "name": "Gemini 3.1 Flash Lite (Thinking Speed)",
           "provider": "Google",
           "providerId": "google",
           "providerOptions": {
@@ -17,8 +17,8 @@
           }
         },
         "quality": {
-          "id": "gemini-3.1-flash-lite-preview", 
-          "name": "Gemini 3.1 Flash Lite (Quality Thinking)",
+          "id": "gemini-3.1-flash-lite-preview",
+          "name": "Gemini 3.1 Flash Lite (Thinking Quality)",
           "provider": "Google",
           "providerId": "google",
           "providerOptions": {
@@ -33,7 +33,7 @@
       "adaptive": {
         "speed": {
           "id": "gemini-3.1-flash-lite-preview",
-          "name": "Gemini 3.1 Flash Lite Preview",
+          "name": "Gemini 3.1 Flash Lite (Adaptive Thinking)",
           "provider": "Google",
           "providerId": "google",
           "providerOptions": {
@@ -46,7 +46,7 @@
         },
         "quality": {
           "id": "gemini-3.1-flash-lite-preview",
-          "name": "Gemini 3.1 Flash Lite (Adaptive Quality)",
+          "name": "Gemini 3.1 Flash Lite (Adaptive Quality Thinking)",
           "provider": "Google",
           "providerId": "google",
           "providerOptions": {
@@ -61,7 +61,7 @@
     },
     "relatedQuestions": {
       "id": "gemini-3.1-flash-lite-preview",
-      "name": "Gemini 3.1 Flash Lite Preview",
+      "name": "Gemini 2.5 Flash Lite",
       "provider": "Google",
       "providerId": "google"
     }
